@@ -2,16 +2,19 @@ package app;
 
 
 import geometricFigures.Circle;
+import geometricFigures.Figure;
 import geometricFigures.Rectangle;
 import geometricFigures.Triangle;
 
 public class App {
     public static void main(String[] args) {
-        Circle circle = new Circle(5.0);
-        Rectangle rectangle = new Rectangle(4.0, 6.0);
-        Triangle triangle = new Triangle(3.0, 4.0, 5.0);
+        Figure circle = new Circle(5.0);
+        Figure rectangle = new Rectangle(4.0, 6.0);
+        Figure triangle = new Triangle(3.0, 4.0, 5.0);
 
-        System.out.println("Circle:");
+        System.out.println("Circle radius:" + circle.getRadius());
+
+        System.out.println("\nCircle:");
         System.out.println("Area: " + circle.area());
         System.out.println("Perimeter: " + circle.perimeter());
 
