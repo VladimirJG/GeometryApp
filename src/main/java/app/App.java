@@ -7,6 +7,8 @@ import geometricFigures.Circle;
 import geometricFigures.Figure;
 import geometricFigures.Rectangle;
 import geometricFigures.Triangle;
+import threeDimensional.Cube;
+import threeDimensional.Sphere;
 
 public class App {
     public static void main(String[] args) {
@@ -15,6 +17,9 @@ public class App {
         Figure triangle = new Triangle(3.0, 4.0, 5.0);
         HalfRectangle halfRectangle = new HalfRectangle();
         RectangleInterface rectangleInterface = new HalfRectangle();
+
+        Figure sphere = new Sphere(5.0);
+        Cube cube = new Cube(5.0);
 
         System.out.println("Circle radius:" + circle.getRadius());
 
@@ -35,5 +40,13 @@ public class App {
 
         System.out.println("\nRectangleInterface");
         rectangleInterface.halfRectangle(rectangle);
+
+        System.out.println("\nSphere Radius: " + sphere.getRadius());
+        System.out.println("Sphere Surface Area: " + sphere.area());
+        System.out.println("Sphere Volume: " + sphere.perimeter());
+
+        System.out.println("\nCube Side Length: " + cube.getSideLength());
+        System.out.println("Cube Surface Area: " + cube.calculateSurfaceArea());
+        System.out.println("Cube Volume: " + cube.calculateVolume());
     }
 }
