@@ -2,6 +2,7 @@ package app;
 
 
 import geoUtil.HalfRectangle;
+import geoUtil.RectangleInterface;
 import geometricFigures.Circle;
 import geometricFigures.Figure;
 import geometricFigures.Rectangle;
@@ -13,6 +14,7 @@ public class App {
         Figure rectangle = new Rectangle(4.0, 6.0);
         Figure triangle = new Triangle(3.0, 4.0, 5.0);
         HalfRectangle halfRectangle = new HalfRectangle();
+        RectangleInterface rectangleInterface = new HalfRectangle();
 
         System.out.println("Circle radius:" + circle.getRadius());
 
@@ -29,6 +31,9 @@ public class App {
         System.out.println("Perimeter: " + triangle.perimeter());
 
         System.out.println("\nHalfRectangle");
-        halfRectangle.halfRectangle(triangle);
+        halfRectangle.halfRectangle(rectangle);
+
+        System.out.println("\nRectangleInterface");
+        rectangleInterface.halfRectangle(rectangle);
     }
 }
